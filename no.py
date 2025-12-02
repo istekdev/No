@@ -10,8 +10,7 @@ def ip():
   return use
 
 socketz = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-amount = int(sha256("No".encode("utf-8")).hexdigest(), 16)
-no = "No"*amount
+no = "No"*32
 port = 443
 ip = ip()
 socketz.sendto(no.encode("utf-8"), (ip, port))
